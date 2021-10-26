@@ -1,0 +1,11 @@
+<h1><p>Post List</p></h1>
+
+<ng-container *ngFor="let mypost of myposts">
+    <div>
+        <app-onepost [thepost]="mypost"></app-onepost>
+    </div><br />
+</ng-container>
+<br />
+Subject: <input type="text" [(ngModel)]="thesubject" /> <br />
+Thought: <input type="text" [(ngModel)]="thetho" /> <br /> 
+<button (click)="add()">Add a thought!</button>
